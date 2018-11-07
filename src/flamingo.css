@@ -1,0 +1,95 @@
+.flamingo-main-box {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    transition-duration: 0.5s;
+}
+
+.flamingo-main-box-exp {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition-duration: 0.5s;
+}
+
+.flamingo-content {
+    align-self: center;
+}
+
+.flamingo-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    overflow: hidden;
+    background-image: url("img.jpg");
+    background-size: cover; 
+    background-position: center;
+    padding: 10px;
+    color: white;
+
+    display: flex;
+    flex-flow: column;
+}
+
+.flamingo-front {
+    position: absolute;
+    top: 85%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(128, 128, 128, 0.7);
+    transition: top .5s;
+    overflow: hidden;
+    color: white;
+    padding: 10px;
+}
+
+.flamingo-front:hover {
+    top: 40%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.flamingo-exp-btn {
+    visibility: hidden;
+}
+
+.flamingo-front:hover > .flamingo-exp-btn:hover {
+    background: black;
+}
+
+.flamingo-front:hover > .flamingo-exp-btn {
+    /*To make exp btn on top of text*/
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    
+    min-width: 30px;
+    min-height: 30px;
+    background: gray;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    visibility: visible;
+    align-self: flex-end;
+    font-size: 24px;
+}
+
+.flamingo-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.flamingo-front:hover > .flamingo-text {
+    text-overflow: initial;
+    white-space: initial;
+}

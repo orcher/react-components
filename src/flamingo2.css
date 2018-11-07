@@ -1,0 +1,127 @@
+.flg-main-box {
+    position: relative;
+    min-width: 100px;
+    width: 20%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 10px;
+    transition-duration: .5s;
+}
+
+.flg-main-box-exp {
+    position: relative;
+    width: 60%;
+    transition-duration: .5s;
+}
+
+.flg-back-box {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    overflow: hidden;
+    border-radius: 5px;
+    background-image: url('./img.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.flg-title-box {
+    padding: 5px;
+    color: white;
+}
+
+.flg-content-box {
+    padding: 5px;
+    margin-bottom: 10%;
+    color: white;
+}
+
+.flg-front-box {
+    position: absolute;
+    overflow: hidden;
+    top: 85%;
+    bottom: 0;
+    width: 100%;
+    background: rgba(107, 107, 107, 0.5);
+    transition-duration: .5s;
+}
+
+.flg-front-box:hover {
+    top: 30%;
+    display: flex;
+    flex-flow: column;
+}
+
+.flg-front-box-exp {
+    position: absolute;
+    overflow: hidden;
+    top: 90%;
+    bottom: 0;
+    width: 100%;
+    background: rgba(107, 107, 107, 0.5);
+    transition-duration: .5s
+}
+
+.flg-desc {
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+.flg-front-box:hover > .flg-desc {
+    text-overflow: initial;
+    white-space: initial;
+}
+
+.flg-front-box-exp:hover {
+    top: 30%;
+}
+
+.flg-btn {
+    visibility: hidden;
+}
+
+.flg-front-box:hover > .flg-btn {
+    /*To make exp btn on top of text*/
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    
+    min-width: 30px;
+    min-height: 30px;
+    background: gray;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    visibility: visible;
+    align-self: flex-end;
+    font-size: 24px;
+}
+
+.flg-front-box-exp:hover > .flg-btn {
+    /*To make exp btn on top of text*/
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    
+    min-width: 30px;
+    min-height: 30px;
+    background: gray;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    visibility: visible;
+    align-self: flex-end;
+    font-size: 24px;
+}
+
+.flg-front-box:hover > .flg-btn:hover {
+    background: black;
+}
+
+.flg-front-box-exp:hover > .flg-btn:hover {
+    background: black;
+}
